@@ -10,11 +10,11 @@
             </svg>
             {{item.title}}
           </dt>
-          <dd v-for="ite in item.data">
-             {{ite}}
+          <dd v-for="ite in item.data" v-html="ite">
+             <!-- {{ite}} -->
           </dd>
         </li>
-        <li class="skill">
+        <li class="tech">
           <dt>
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-heart20"></use>
@@ -22,20 +22,28 @@
             Tech. 技能点
           </dt>
           <dd>
-            <span>html</span>
-            <el-progress :text-inside="true" :stroke-width="18" :percentage="20" status="success"></el-progress>
+            <span>HTML5/CSS3</span>
+            <el-progress :text-inside="true" :stroke-width="23" :percentage="90" status="success"></el-progress>
           </dd>
           <dd>
-            <span>html</span>
-            <el-progress :text-inside="true" :stroke-width="18" :percentage="20" status="success"></el-progress>
+            <span>Javascript</span>
+            <el-progress :text-inside="true" :stroke-width="23" :percentage="80" status="success"></el-progress>
           </dd>
           <dd>
-            <span>html</span>
-            <el-progress :text-inside="true" :stroke-width="18" :percentage="20" status="success"></el-progress>
+            <span>php</span>
+            <el-progress :text-inside="true" :stroke-width="23" :percentage="50" status="success"></el-progress>
           </dd>
           <dd>
-            <span>html</span>
-            <el-progress :text-inside="true" :stroke-width="18" :percentage="20" status="success"></el-progress>
+            <span>Vue</span>
+            <el-progress :text-inside="true" :stroke-width="23" :percentage="65" status="success"></el-progress>
+          </dd>
+          <dd>
+            <span>Ajax</span>
+            <el-progress :text-inside="true" :stroke-width="23" :percentage="70" status="success"></el-progress>
+          </dd>
+          <dd>
+            <span>Mysql</span>
+            <el-progress :text-inside="true" :stroke-width="23" :percentage="40" status="success"></el-progress>
           </dd>
         </li>
       </ul>
@@ -52,30 +60,33 @@ export default {
           title:'Basic info. 基本信息',
           data:[
             '个人信息: 连佳豪 / 男 / 22岁 / 大三',
-            '院校：深圳信息学院',
-            '专业：网页前端开发',
-            '爱好:魔方、篮球'
+            '院校: 深圳信息学院',
+            '专业: 网页前端开发',
+            '爱好: 篮球，电影，音乐',
+            // '驾驶证: C1',
+            '个人博客：<a href="http://www.jh2k15.online">http://www.jh2k15.online</a>'
             ]
         },
         {
           title:'Contact. 联系方式',
           data:[
-            '邮箱: 734055405@qq.com',
-            '微信: jh2k15'
+            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-youxiang"></use></svg> 邮箱: 734055405@qq.com',
+            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat"></use></svg> 微信: jh2k15',
+            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-phone"></use></svg> 手机: 13612345092'
             ]
         },
         {
           title:'Application. 应聘岗位',
           data:[
-            'Web前端实习生'
+            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-tech"></use></svg> Web前端实习生'
             ]
         },
         {
           title:'Certificate. 证书',
           data:[
-            '大学英语四级',
-            '网页设计师证',
-            '年度奖学金'
+            // '大学英语四级',
+            // '网页设计师证',
+            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-tech"></use></svg> 年度奖学金'
             ]
         },
       ]
@@ -108,19 +119,27 @@ export default {
           line-height:4rem;
         }
         dd{
-          font-size:1.4rem;
+          font-size:1.5rem;
           color:#fff;
           line-height:2rem;
+          a{
+            display:inline;
+            color:#fff;
+          }
         }
       }
     }
   }
-  .skill{
+  .tech{
     dd{
+      span{
+        display:inline-block;
+        width:30%;
+      }
       padding-bottom:0.3rem;
       &>div{
         display:inline-block;
-        width:18rem;
+        width:68%;
       }
     }
   }

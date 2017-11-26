@@ -24,7 +24,8 @@ export default {
     myAside,
     myMain,
     myFooter,
-  }
+  },
+  // props: ['mainColor']
 }
 </script>
 
