@@ -1,7 +1,11 @@
 <template>
   <div class="aside">
-      <h1><img src="../assets/jh2k15.jpg" height="180" alt=""></h1>
-      <h2>一腔热血的激情</h2>
+      <h1><img src="../assets/my.jpg" alt=""></h1>
+      <h2>
+        <p>一腔热血的激情</p>
+        <p>一夜失眠的创意</p>
+        <p>一个像素的执着</p>
+      </h2>
       <ul class="">
         <li v-for="(item,index) in arr">
           <dt>
@@ -22,7 +26,7 @@
             Tech. 技能点
           </dt>
           <dd>
-            <span>HTML5/CSS3</span>
+            <span>HTML/CSS</span>
             <el-progress :text-inside="true" :stroke-width="23" :percentage="90" status="success"></el-progress>
           </dd>
           <dd>
@@ -35,11 +39,11 @@
           </dd>
           <dd>
             <span>Vue</span>
-            <el-progress :text-inside="true" :stroke-width="23" :percentage="65" status="success"></el-progress>
+            <el-progress :text-inside="true" :stroke-width="23" :percentage="70" status="success"></el-progress>
           </dd>
           <dd>
             <span>Ajax</span>
-            <el-progress :text-inside="true" :stroke-width="23" :percentage="70" status="success"></el-progress>
+            <el-progress :text-inside="true" :stroke-width="23" :percentage="75" status="success"></el-progress>
           </dd>
           <dd>
             <span>Mysql</span>
@@ -71,14 +75,14 @@ export default {
           title:'Contact. 联系方式',
           data:[
             '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-youxiang"></use></svg> 邮箱: 734055405@qq.com',
-            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat"></use></svg> 微信: jh2k15',
+            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat1"></use></svg> 微信: jh2k15',
             '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-phone"></use></svg> 手机: 13612345092'
             ]
         },
         {
           title:'Application. 应聘岗位',
           data:[
-            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-tech"></use></svg> Web前端实习生'
+            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-tech"></use></svg> Web前端开发工程师'
             ]
         },
         {
@@ -86,7 +90,7 @@ export default {
           data:[
             // '大学英语四级',
             // '网页设计师证',
-            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-tech"></use></svg> 年度奖学金'
+            '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-iconfont-jiangbei"></use></svg> 年度奖学金'
             ]
         },
       ]
@@ -98,12 +102,21 @@ export default {
 </script>
 
 <style lang='scss'>
+   $color1: #409EFF;
   .aside{
-    background-color:#409EFF;
+    background-color: $color1;
     padding:1.4rem;
     h1,h2{
       text-align:center;
       margin-top:2rem;
+      p{
+        font-size:2rem;
+        margin:0;
+        color:#122C47;
+      }
+      img{
+        height:18rem
+      }
     }
     h2{
       margin-bottom:0;

@@ -34,7 +34,7 @@ export default {
     font-size: 62.5%;  //10 ÷ 16 × 100% = 62.5%
   }
   body{
-    font-size:1.6rem;
+    font-size:1.6em;
     background-color:#e0e0e0;
   }
   ul{
@@ -48,7 +48,7 @@ export default {
     display: block;
   }
   .icon {
-   width: 1em; height: 1em;
+   width: 1.2em; height: 1.2em;
    vertical-align: -0.15em;
    fill: currentColor;
    overflow: hidden;
@@ -58,7 +58,7 @@ export default {
   }
   .main__wrapper{
     position:relative;
-    border-radius:0.4rem;
+    border-radius:0.4em;
     .aside{
       top:0;
       bottom:0;
